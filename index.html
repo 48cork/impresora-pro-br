@@ -114,26 +114,19 @@
       font-weight: 600;
     }
     .email-bar button { height: 40px; border: 0; border-radius: var(--radius-btn); padding: 0 16px; font-family: inherit; font-weight: 900; color: var(--orange); background: var(--white); cursor: pointer; }
-    .hero { background: var(--navy); color: var(--white); padding: 76px 0 72px; overflow: hidden; }
-    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 56px; }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.1);
-      color: var(--white);
-      padding: 8px 12px;
-      font-size: .86rem;
-      font-weight: 800;
-      border: 1px solid rgba(255,255,255,.16);
-    }
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%); color: #fff; padding: 56px 0 48px; }
+    .hero__eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 12px; }
     h1, h2, h3 { line-height: 1.12; margin: 0; letter-spacing: 0; }
     h1 { margin-top: 20px; font-size: clamp(2.45rem, 5vw, 4.8rem); font-weight: 900; }
-    h1 span { color: #FCD34D; }
-    .hero p { color: #CBD5E1; font-size: 1.12rem; max-width: 620px; margin: 22px 0 28px; }
-    .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .mini-proof { margin-top: 26px; display: flex; gap: 18px; flex-wrap: wrap; color: #E2E8F0; font-size: .9rem; font-weight: 700; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-top: 0; margin-bottom: 16px; }
+    .hero h1 em { font-style: normal; color: #7dd3fc; }
+    .hero__lead { font-size: 1.05rem; color: rgba(255,255,255,.82); max-width: 640px; margin-bottom: 24px; line-height: 1.7; }
+    .hero__actions { margin-bottom: 24px; }
+    .hero__meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .hero__byline { font-size: .8rem; color: rgba(255,255,255,.7); }
+    .hero__byline strong { color: #fff; font-weight: 600; }
+    .hero__date { font-size: .78rem; color: rgba(255,255,255,.6); background: rgba(255,255,255,.12); padding: 4px 10px; border-radius: 100px; border: 1px solid rgba(255,255,255,.2); }
+    .hero__badge { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; color: rgba(255,255,255,.75); background: rgba(255,255,255,.10); padding: 5px 12px; border-radius: 100px; border: 1px solid rgba(255,255,255,.2); }
     .hero-visual {
       position: relative;
       min-height: 430px;
@@ -336,35 +329,23 @@
     </div>
   </div>
 
-  <header id="top" class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="badge">8 modelos analisados • 3 recomendações finais</span>
-        <h1>As melhores <span>impressoras 3D profissionais</span> de 2026</h1>
-        <p>Análise independente de impressoras 3D profissionais — sem patrocínio. Comparamos velocidade, materiais técnicos, multicolor, custo de operação e retorno para makers avançados, laboratórios, escolas e pequenos negócios.</p>
-        <div class="hero-actions">
-          <a class="btn btn-orange" href="#ranking">Ver ranking</a>
-          <a class="btn btn-blue" href="#calculadora">Calcular retorno</a>
-        </div>
-        <div class="mini-proof">
-          <span>✓ Links com tag Amazon</span>
-          <span>✓ Critérios ponderados</span>
-          <span>✓ Atualizado em 2026</span>
-        </div>
+  <header id="top" class="hero" aria-label="Título e apresentação">
+    <div class="container">
+      <p class="hero__eyebrow">ImpresoraProBR · Análise Independente 2026</p>
+      <h1>As Melhores Impressoras 3D<br>
+          <em>Profissionais de 2026</em></h1>
+      <p class="hero__lead">
+        Analisamos 8 modelos de impressoras 3D profissionais disponíveis na Amazon Brasil —
+        velocidade, câmara fechada, multicolor, custo de operação e retorno real.
+        Sem produto enviado por fabricante. Sem patrocínio.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn-orange" href="#ranking">Ver Impressoras →</a>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="printer-hero">
-          <div class="filament"></div>
-          <div class="printer-frame"></div>
-          <div class="print-head"></div>
-          <div class="cube"></div>
-          <div class="print-bed"></div>
-        </div>
-        <div class="floating-card">
-          <span>Score médio</span>
-          <strong>92/100</strong>
-          <small>Foco em produção real</small>
-        </div>
+      <div class="hero__meta">
+        <span class="hero__byline">Por <strong>Equipe ImpresoraProBR</strong></span>
+        <span class="hero__date">Atualizado em junho de 2026</span>
+        <span class="hero__badge">🖨️ 8 modelos analisados</span>
       </div>
     </div>
   </header>
